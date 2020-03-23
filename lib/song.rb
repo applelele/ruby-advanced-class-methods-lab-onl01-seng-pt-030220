@@ -67,10 +67,10 @@ class Song
     new_song = self.create
     new_song.name = song_title
     new_song.artist_name = artist
-    
-    song_data = new_from_filename(file_name)
-    song_data.save
-    song_data
+    new_song
+    # song_data = new_from_filename(file_name)
+    # song_data.save
+    # song_data
 
   end
   
