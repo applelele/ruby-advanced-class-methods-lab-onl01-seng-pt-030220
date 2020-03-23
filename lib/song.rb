@@ -59,7 +59,6 @@ class Song
   end
   
   def self.create_from_filename(file_name)
-    binding.pry
     song_data = file_name.split(" - ")
     artist = song_data[0]
     song_title = song_data[1].gsub!(".mp3", "")
