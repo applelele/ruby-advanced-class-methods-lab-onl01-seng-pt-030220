@@ -48,9 +48,13 @@ class Song
   end
   
   def self.new_from_filename(file_name)
-    song_array = file_name.split(/\s-\s|\.\w/)
-    name = song_array[1]
-    artist_name = song_array[0]
+    song_data = file_name.split(" - ")
+    artist = song_data[0]
+    song_title = song_data[1].gsub!(".mp3", "")
+    
+    # song_array = file_name.split(/\s-\s|\.\w/)
+    # name = song_array[1]
+    # artist_name = song_array[0]
     
     song = self.create  ## self.new is also fine
     song.name = name
@@ -59,17 +63,9 @@ class Song
   end
   
   def self.create_from_filename(file_name)
-    song_data = file_name.split(" - ")
-    artist = song_data[0]
-    song_title = song_data[1].gsub!(".mp3", "")
-    
-    new_song = self.create
-    new_song.name = song_title
-    new_song.artist_name = artist
-    new_song
-    # song_data = new_from_filename(file_name)
-    # song_data.save
-    # song_data
+    song_data = new_from_filename(file_name)
+    song_data.save
+    song_data
 
   end
   
