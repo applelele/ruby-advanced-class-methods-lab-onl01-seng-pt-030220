@@ -59,10 +59,12 @@ class Song
   end
   
   def self.create_from_filename(file_name)
-    song_data = []
-    song_data << new_from_filename(file_name)
-    song_data
-    song_match = find_by_name(name)
-    song_match.name
+    self.all = []
+    self.all << new_from_filename(file_name)
+    self.all
+
+  end
+  
+  def self.destroy_all
   end
 end
