@@ -61,7 +61,8 @@ class Song
   def self.create_from_filename(file_name)
     binding.pry
     song_data = file_name.split(" - ")
-    
+    artist_name = song_data[0]
+    song_title = song_data[1]
     song_data = new_from_filename(file_name)
     song_data.save
     song_data
