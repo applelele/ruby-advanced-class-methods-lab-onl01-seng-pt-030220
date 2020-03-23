@@ -49,11 +49,11 @@ class Song
   
   def self.new_from_filename(file_name)
     song_array = file_name.split(/\s-\s|\.\w/)
-    @name = song_array[1]
-    @artist_name = song_array[0]
+    name = song_array[1]
+    artist_name = song_array[0]
     
     song = self.new
-    song.name = @name
+    song.name = name
     song.artist_name = @artist_name
     song
   end
