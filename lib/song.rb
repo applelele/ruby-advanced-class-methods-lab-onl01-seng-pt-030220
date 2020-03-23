@@ -36,6 +36,7 @@ class Song
   
   def self.find_or_create_by_name(name2)
     if find_by_name(name2)
+      binding.pry
       find_by_name(name2)
     else
       create_by_name(name2)
