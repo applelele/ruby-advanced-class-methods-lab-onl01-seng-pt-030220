@@ -18,13 +18,13 @@ class Song
   end
   
   def self.new_by_name(name)
-    song_name = self.create  ## not self.new(name)!
+    song_name = self.new  ## not self.new(name)!
     song_name.name = name  ## Here argument comes
     song_name
   end
   
   def self.create_by_name(name)
-    song = self.create
+    song = self.new
     song.name = name
     song.save
     song
