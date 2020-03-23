@@ -52,7 +52,7 @@ class Song
     name = song_array[1]
     artist_name = song_array[0]
     
-    song = self.new
+    song = self.create 
     song.name = name
     song.artist_name = @artist_name
     song
