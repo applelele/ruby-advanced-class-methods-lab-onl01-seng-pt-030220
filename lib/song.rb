@@ -18,13 +18,13 @@ class Song
   end
   
   def self.new_by_name(name)
-    song_name = self.new  ## not self.new(name)!
+    song_name = self.create  ## not self.new(name)!
     song_name.name = name  ## Here argument comes
     song_name
   end
   
   def self.create_by_name(name)
-    song = self.new
+    song = self.create
     song.name = name
     song.save
     song
@@ -49,8 +49,8 @@ class Song
   
   def self.new_from_filename(file_name)
     song_array = file_name.split(" - ")
-    artist = song_data[0]
-    name = song_data[1].gsub!(".mp3", "")
+    artist = song_array[0]
+    name = song_array[1].gsub!(".mp3", "")
     
     # song_array = file_name.split(/\s-\s|\.\w/)
     # name = song_array[1]
