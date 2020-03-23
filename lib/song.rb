@@ -62,6 +62,6 @@ class Song
     song_data = []
     song_data << new_from_filename(file_name)
     song_data
-    song_match.find_by_name
+    song_match = find_by_name
   end
 end
