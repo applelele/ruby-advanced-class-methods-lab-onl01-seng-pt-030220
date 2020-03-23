@@ -73,13 +73,9 @@ class Song
 
   end
   
+  def self.destroy_all
     
-  # def self.create_from_filename
-  #   song_data = []
-  #   song_data << new_from_filename
-  #   song_data
-    
-  # end
+  end
   
 
 end
